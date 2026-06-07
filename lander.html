@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>USA FOR ANYTHING — Welcome</title>
+<meta name="description" content="Welcome to USA FOR ANYTHING. Please verify to continue." />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/dark-mode.css" />
+<script defer src="assets/js/main.js"></script>
+<style>
+body {
+  background: url('assets/img/image1.png') no-repeat center center fixed;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  body {
+    background-image: url('assets/img/image.png');
+  }
+}
+.site-header {
+  backdrop-filter: none;
+}
+#verification-modal {
+  color: white;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+@keyframes auto-click {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.03); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.03); }
+  60% { transform: scale(1); }
+  75% { transform: scale(1.03); }
+  85% { transform: scale(1); }
+  95% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+#verify-btn-1 {
+  animation: auto-click 1.5s linear forwards;
+  background-color: #16a34a;
+  border-color: #16a34a;
+}
+#verification-modal .spinner {
+  border-top-color: #16a34a;
+  width: 40px;
+  height: 40px;
+  border-width: 4px;
+}
+.checkmark {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: white;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes pop { from { transform: scale(0); } to { transform: scale(1); } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" role="banner">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.svg" alt="USA FOR ANYTHING logo" class="logo" style="width:40px;height:auto;" />
+      <span class="brand-name">USA FOR ANYTHING</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav" role="navigation" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/sustainable-living.html">Sustainable Living</a></li>
+        <li><a href="pages/eco-travel.html">Eco Travel</a></li>
+        <li><a href="pages/renewables.html">Renewables</a></li>
+        <li class="more">
+          <button class="more-btn" aria-haspopup="true" aria-expanded="false">More</button>
+          <ul class="dropdown">
+            <li><a href="pages/recycling.html">Recycling Guide</a></li>
+            <li><a href="pages/green-cities.html">Green Cities</a></li>
+            <li><a href="pages/conservation.html">Wildlife Conservation</a></li>
+            <li><a href="pages/events.html">Events</a></li>
+            <li><a href="pages/grants.html">Grants & Programs</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="pages/privacy.html">Privacy</a></li>
+            <li><a href="pages/terms.html">Terms</a></li>
+            <li><a href="pages/disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main"></main>
+<dialog id="verification-modal" class="modal-dialog">
+  <div id="modal-content">
+    <h2>Unlock the Future of American Travel</h2>
+    <p>Prepare for a journey through sustainable landscapes and future cities. Verify now to unlock your guide to the next era of travel.</p>
+    <div style="display:flex; gap:10px; justify-content:center; margin-top:20px;">
+      <button id="verify-btn-1" class="btn">Verify</button>
+      <button id="verify-btn-2" class="btn secondary">Enter</button>
+    </div>
+  </div>
+  <div id="modal-loading" style="display:none; flex-direction:column; align-items:center; justify-content:center; min-height:150px;">
+    <div class="spinner"></div>
+    <p>Verifying...</p>
+  </div>
+  <div id="modal-verified" style="display:none; flex-direction:column; align-items:center; justify-content:center; min-height:150px;">
+    <div class="checkmark">✓</div>
+    <p>Verified!</p>
+  </div>
+</dialog>
+</body>
+</html>
